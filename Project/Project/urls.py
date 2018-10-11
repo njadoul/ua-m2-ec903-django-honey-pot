@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Project.HoneyPot import views as core_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^ŝignup/$', core_views.signup, name = 'signup')
 ]
