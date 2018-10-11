@@ -7,3 +7,6 @@ class Profil(models.Model):
     prénom = models.TextField(max_length = 50)
     mail = models.EmailField(max_length = 50)
     message = models.TextField(max_length = 50)
+    ip = models.TextField(max_length = 50)
+    user_agent = models.TextField(max_length = 50)
+    date = models.DateField()
