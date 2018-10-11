@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contib.auth import login, authenticate
-from Project.core.forms import SignUpForm
+from Project.HoneyPot.forms import SignUpForm
 
 def signup(request):
     if request.method == 'POST':
