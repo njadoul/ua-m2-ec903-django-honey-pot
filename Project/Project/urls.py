@@ -14,8 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+
 from django.urls import path
+from HoneyPot import views
+from HoneyPot.views import contact, connex
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contact/', views.contact, name='contact'),
+    path('connex/', views.connex, name='connex'),
+    
+    path('', views.home, name = 'home'),
+    path('conditions/', views.conditions, name = 'conditions'),
+    path('mentions/', views.mentions, name = 'mentions'),
+    path('',include('HoneyPot.urls')),
+
 ]
