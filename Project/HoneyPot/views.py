@@ -50,3 +50,12 @@ def connex(request):
             get_connex.save()
 
     return render(request, 'HoneyPot/connex.html', locals())
+
+def home(request):
+    return HttpResponse('<h1>Page login</h1>')
+def conditions(request):
+    return HttpResponse('<h1>Page conditions</h1>')
+def donnees(request):
+    return HttpResponse('<h1>Page donnees</h1>')
+def mentions(request):
+    return HttpResponse('<h1>Page mentions</h1>')
