@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return render(request,'HoneyPot/login.html')
+    return render(request,'HoneyPot/login.html', { 'title' : 'Se connecter'})
 
 def contact(request):
     return render(request,'HoneyPot/contact.html')

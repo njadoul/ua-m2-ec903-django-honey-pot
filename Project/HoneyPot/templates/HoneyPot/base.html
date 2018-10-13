@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{% static 'build/css/bootstrap.min.css' %}">
+
+    {% if title %}
+      <title>Nathan et Loic | {{ title }}</title>
+    {% else %}
+      <title>Nathan et Loic</title>
+    {% endif %}
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+
+    <script src="{% static 'build/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'build/js/popper.min.js' %}"></script>
+    <script src="{% static 'build/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
