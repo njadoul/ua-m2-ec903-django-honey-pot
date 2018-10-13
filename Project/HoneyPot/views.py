@@ -6,13 +6,14 @@ import datetime
 
 def contact(request):
     form = ContactForm(request.POST or None)
-    if form.is_valide():
-        nom = form.cleaned_data['nom']
-        prénom = form.cleaned_data['prénom']
-        mail = form.cleaned_data['mail']
-        message = form.cleaned_data['message']
+    if form.is_valid():
+        get_contact = Contact()
+        get_contact.nom = form.cleaned_data['nom']
+        get_contact.prénom = form.cleaned_data['prénom']
+        get_contact.mail = form.cleaned_data['mail']
+        get_contact.message = form.cleaned_data['message']
 
-        user_agent = request.META.get['HTTP_USER_AGENT']
+        get_contact.user_agent = request.META['HTTP_USER_AGENT']
 
         if ContactForm(request.POST):
             x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
@@ -20,21 +21,22 @@ def contact(request):
                 ipaddress = x_forwarded_for.split(',')[-1].strip()
             else:
                 ipaddress = request.META.get('REMOTE_ADDR')
-            get_ip = Contact()
-            ip = ipaddress
-            date = datetime.date.today()
-            #get_ip.save()
+
+            get_contact.ip = ipaddress
+            get_contact.date = datetime.datetime.today()
+            get_contact.save()
 
     return render(request, 'HoneyPot/contact.html', locals())
 
 
 def connex(request):
     form = ConnexForm(request.POST or None)
-    if form.is_valide():
-        login = form.cleaned_data['login']
-        password = form.cleaned_data['password']
+    if form.is_valid():
+        get_connex = Connex()
+        get_connex.login = form.cleaned_data['login']
+        get_connex.password = form.cleaned_data['password']
 
-        user_agent = request.META.get['HTTP_USER_AGENT']
+        get_connex.user_agent = request.META['HTTP_USER_AGENT']
 
         if ContactForm(request.POST):
             x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
@@ -42,9 +44,9 @@ def connex(request):
                 ipaddress = x_forwarded_for.split(',')[-1].strip()
             else:
                 ipaddress = request.META.get('REMOTE_ADDR')
-            get_ip = Connex()
-            ip = ipaddress
-            date = datetime.date.today()
-            #get_ip.save()
+
+            get_connex.ip = ipaddress
+            get_connex.date = datetime.datetime.today()
+            get_connex.save()
 
     return render(request, 'HoneyPot/connex.html', locals())
