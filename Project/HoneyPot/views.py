@@ -3,16 +3,16 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse('<h1>Page login</h1>')
+    return render(request,'HoneyPot/login.html')
 
 def contact(request):
-    return HttpResponse('<h1>Page contact</h1>')
+    return render(request,'HoneyPot/contact.html')
 
 def conditions(request):
-    return HttpResponse('<h1>Page conditions</h1>')
+    return render(request,'HoneyPot/conditions.html')
 
 def donnees(request):
-    return HttpResponse('<h1>Page donnees</h1>')
+    return render(request,'HoneyPot/donnees.html')
 
 def mentions(request):
-    return HttpResponse('<h1>Page mentions</h1>')
+    return render(request,'HoneyPot/mentions.html')
