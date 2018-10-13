@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from HoneyPot import views
+from HoneyPot.views import contact, connex
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contact/', views.contact, name='contact'),
+    path('connex/', views.connex, name='connex'),
 ]

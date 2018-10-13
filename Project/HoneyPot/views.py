@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import Contact
+from .forms import Connex
 
 def contact(request):
     form = Contact(request.POST or None)
