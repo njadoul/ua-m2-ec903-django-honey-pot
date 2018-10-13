@@ -1,6 +1,8 @@
 from django.shortcuts import render
+
 from .forms import ContactForm, ConnexForm
 from .models import Contact, Connex
+from django.http import HttpResponse
 import datetime
 
 
