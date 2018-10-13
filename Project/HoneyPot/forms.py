@@ -4,9 +4,9 @@ from .models import Contact, Connex
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = '__all__'
+        fields = ('nom', 'prénom', 'mail', 'message')
 
 class ConnexForm(forms.ModelForm):
     class Meta:
         model = Connex
-        fields = '__all__'
+        fields = ('login', 'password')
