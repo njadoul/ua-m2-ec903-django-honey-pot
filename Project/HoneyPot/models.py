@@ -4,9 +4,9 @@ from django.utils import timezone
 class Connex(models.Model):
     login = models.TextField(max_length = 50, blank = True)
     password = models.TextField(max_length = 50, blank = True)
-    ip = models.TextField(max_length = 50, blank = True)
-    user_agent = models.TextField(max_length = 50, blank = True)
-    date = models.DateTimeField(default=timezone.now, blank = True)
+    ip = models.GenericIPAddressField()
+    user_agent = models.TextField(max_length = 50)
+    date = models.DateTimeField(default=timezone.now)
 
     class Meta:
         ordering = ['date']
@@ -20,9 +20,9 @@ class Contact(models.Model):
     prénom = models.TextField(max_length = 50, blank = True)
     mail = models.EmailField(max_length = 50, blank = True)
     message = models.TextField(max_length = 50, blank = True)
-    ip = models.TextField(max_length = 50, blank = True)
-    user_agent = models.TextField(max_length = 50, blank = True)
-    date = models.DateTimeField(default=timezone.now, blank = True)
+    ip = models.GenericIPAddressField()
+    user_agent = models.TextField(max_length = 50)
+    date = models.DateTimeField(default=timezone.now)
 
     class Meta:
         ordering = ['date']
