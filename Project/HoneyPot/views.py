@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .forms import Contact
-from .forms import Connex
+from .forms import ContactForm
+from .forms import ConnexForm
 
 def contact(request):
-    form = Contact(request.POST or None)
+    form = ContactForm(request.POST or None)
     if form.is_valide():
         nom = form.cleaned_data['nom']
         prénom = form.cleaned_data['prénom']
@@ -14,7 +14,7 @@ def contact(request):
 
 
 def connex(request):
-    form = Connex(request.POST or None)
+    form = ConnexForm(request.POST or None)
     if form.is_valide():
         login = form.cleaned_data['login']
         password = form.cleaned_data['password']

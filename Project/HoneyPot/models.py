@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils import timezone
 
-class Profil(models.Model):
-    login = models.TextField(max_length = 50)
-    password = models.TextField(max_length = 50)
-    ip = models.TextField(max_length = 50)
-    user_agent = models.TextField(max_length = 50)
-    date = models.DateTimeField(default=timezone.now)
+class Connex(models.Model):
+    login = models.TextField(max_length = 50, blank = True)
+    password = models.TextField(max_length = 50, blank = True)
+    ip = models.TextField(max_length = 50, blank = True)
+    user_agent = models.TextField(max_length = 50, blank = True)
+    date = models.DateTimeField(default=timezone.now, blank = True)
 
     class Meta:
         ordering = ['date']
@@ -16,13 +16,13 @@ class Profil(models.Model):
         return self.ip
 
 class Contact(models.Model):
-    nom = models.TextField(max_length = 50)
-    prénom = models.TextField(max_length = 50)
-    mail = models.EmailField(max_length = 50)
-    message = models.TextField(max_length = 50)
-    ip = models.TextField(max_length = 50)
-    user_agent = models.TextField(max_length = 50)
-    date = models.DateTimeField(default=timezone.now)
+    nom = models.TextField(max_length = 50, blank = True)
+    prénom = models.TextField(max_length = 50, blank = True)
+    mail = models.EmailField(max_length = 50, blank = True)
+    message = models.TextField(max_length = 50, blank = True)
+    ip = models.TextField(max_length = 50, blank = True)
+    user_agent = models.TextField(max_length = 50, blank = True)
+    date = models.DateTimeField(default=timezone.now, blank = True)
 
     class Meta:
         ordering = ['date']
