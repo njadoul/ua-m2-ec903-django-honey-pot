@@ -23,4 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/', views.contact, name='contact'),
     path('connex/', views.connex, name='connex'),
+    path('', views.home, name = 'home'),
+    path('conditions/', views.conditions, name = 'conditions'),
+    path('mentions/', views.mentions, name = 'mentions'),
 ]
