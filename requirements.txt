@@ -5,3 +5,4 @@ Nodejs>=7.10.1
 gulp==3.1.9
 gulp-uglify
 gulp-minify-css
+django-crispy-form==1.7.2

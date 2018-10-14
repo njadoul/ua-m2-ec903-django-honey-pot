@@ -16,10 +16,20 @@
     {% endif %}
   </head>
   <body>
+
     {% block content %} {% endblock %}
 
-    <script src="{% static 'build/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'build/js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'build/js/notify.min.js' %}"></script>
+
+    {% if messages %}
+      {% for message in messages %}
+        <script>$.notify("{{message}}", "{{message.tags}}");</script>
+      {% endfor %}
+    {% endif %}
+    
     <script src="{% static 'build/js/popper.min.js' %}"></script>
     <script src="{% static 'build/js/bootstrap.min.js' %}"></script>
+
   </body>
 </html>
