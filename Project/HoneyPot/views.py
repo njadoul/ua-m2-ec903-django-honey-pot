@@ -11,7 +11,7 @@ def contact(request):
     if form.is_valid():
         get_contact = Contact()
         get_contact.nom = form.cleaned_data['nom']
-        get_contact.prénom = form.cleaned_data['prénom']
+        get_contact.prenom = form.cleaned_data['prenom']
         get_contact.mail = form.cleaned_data['mail']
         get_contact.message = form.cleaned_data['message']
 
