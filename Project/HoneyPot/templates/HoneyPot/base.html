@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" type="image/png" href="{%  static 'favicon.png' %}">
     <link rel="stylesheet" href="{% static 'build/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'build/css/main.css' %}">
 
     {% if title %}
       <title>Nathan et Loic | {{ title }}</title>
@@ -16,7 +18,7 @@
   <body>
     {% block content %} {% endblock %}
 
-    <script src="{% static 'build/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'build/js/jquery-3.3.1.slim.min.js' %}"></script>
     <script src="{% static 'build/js/popper.min.js' %}"></script>
     <script src="{% static 'build/js/bootstrap.min.js' %}"></script>
   </body>

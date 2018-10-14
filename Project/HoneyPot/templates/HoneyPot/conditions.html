@@ -1,3 +1,40 @@
+{% extends "HoneyPot/base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="logo-container">
+    <img alt="" src="{% static 'build/img/miel.png' %}">
+      <a class="navbar-brand" href="{% url 'home' %}">NATHAN ET LOIC</a>
+	</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mentions' %}">MENTIONS LEGALES </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'donnees' %}">DONNEES PERSONNELLES </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'conditions' %}">CGU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">SE CONNECTER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">NOUS CONTACTER</a>
+          </li>
+        </ul>
+      </div>
+</nav>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
 
 <h1 class="countheads">Conditions générales d'utilisation</h1>
 <h2>Design your privacy</h2>
@@ -258,3 +295,9 @@ L'Éditeur s'engage à vous offrir la possibilité de vous faire restituer l'ens
 <a class="inline-block license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license">
 <img style="border-width:0" alt="Licence Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
 <i class="inline-block license-text">Ces CGU sont mises à disposition par<a href="http://www.aboutinnovation.com" target="_blank"> Aboutinnovation</a> et<a href="http://privacytech.fr" target="_blank"> Privacy Tech</a> selon les termes de la <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license"> Licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 4.0 International</a>.</i></div>
+
+
+      </div>
+    </main>
+
+{% endblock %}
