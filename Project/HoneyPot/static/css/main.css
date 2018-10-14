@@ -165,6 +165,14 @@ body {
 
 }
 
+#id_username, #id_password, #id_login, #id_nom, #id_prenom, #id_mail,#id_message{
+  color: black !important;
+}
+
+#id_message{
+  border-radius: 3px !important;
+}
+
 .form-control {
     margin-bottom: 5px;
     border: 1px solid #e3e3e3;

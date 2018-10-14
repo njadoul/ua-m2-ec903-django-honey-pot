@@ -4,6 +4,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 <div class="logincl">
 <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent ">
 <div class="container">
@@ -39,40 +41,32 @@
   <div class="content">
     <div class="container">
       <div class="col-md-4 ml-auto mr-auto">
-        <div class="card card-login card-plain">
-          <form class="form" action="" method="">
-            <div class="card-header text-center">
-              <div class="logo-container">
-                <img alt="" src="{% static 'build/img/miel.png' %}">
-              </div>
+        <div class="card card-login card-plain" style="margin-top: -50px">
+          <div class="card-header text-center">
+            <div class="logo-container">
+              <img alt="" src="{% static 'build/img/miel.png' %}">
             </div>
-            <div class="card-body">
-              <div class="input-group no-border input-lg" style="margin-bottom: 20px;">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    &#9824;
-                  </span>
+          </div>
+
+          {% if not user.is_authenticated %}
+            <form class="form" action="{% url 'home' %}" method="post">
+              {% csrf_token %}
+
+              <div class="card-body">
+
+                {{form|crispy}}
+              </div>
+              <div class="card-footer text-center">
+                <button class="btn btn-primary btn-round btn-lg btn-block" type="submit">Se connecter</button>
+
+                <div class="pull-left">
+                  <h6><a class="link" href="{% url 'register' %}">Créer un compte</a></h6>
                 </div>
-                <input class="form-control" type="text" placeholder="Pseudo...">
-              </div>
 
-              <div class="input-group no-border input-lg">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    &#9881;
-                  </span>
-                </div>
-                <input class="form-control" type="password" placeholder="Mot de passe...">
               </div>
-            </div>
-            <div class="card-footer text-center">
-              <a class="btn btn-primary btn-round btn-lg btn-block" href="#">Se connecter</a>
+            </form>
+          {% endif %}
 
-              <div class="pull-left">
-                <h6><a class="link" href="{% url 'register' %}">Créer un compte</a></h6>
-              </div>
-
-          </div></form>
         </div>
       </div>
     </div>

@@ -23,9 +23,15 @@
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'conditions' %}">CGU</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">SE CONNECTER</a>
-          </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">SE DECONNECTER</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">SE CONNECTER</a>
+            </li>
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'contact' %}">NOUS CONTACTER</a>
           </li>

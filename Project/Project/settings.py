@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'HoneyPot',
     'users.apps.UsersConfig',
-    'crispy_forms'
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,3 +133,11 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CRISPY_TEMPLATE_PACK ='bootstrap4'
+
+LOGIN_REDIRECT_URL = 'home'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
