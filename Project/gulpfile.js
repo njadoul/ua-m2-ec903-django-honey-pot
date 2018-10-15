@@ -11,3 +11,4 @@ gulp.task('uglify',function () {
 });
 
 gulp.task('default', ['minify-css', 'uglify'])
+gulp.task('build', ['minify-css', 'uglify']);
