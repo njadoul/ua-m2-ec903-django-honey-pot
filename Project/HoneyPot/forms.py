@@ -10,3 +10,8 @@ class ConnexForm(forms.ModelForm):
     class Meta:
         model = Connex
         fields = ('login', 'password')
+
+        widgets = {
+        'password': forms.PasswordInput(),
+    }
+

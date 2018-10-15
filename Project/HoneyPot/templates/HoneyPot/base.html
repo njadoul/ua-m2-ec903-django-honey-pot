@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" href="{%  static 'favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'build/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'build/css/main.css' %}">
+
+    {% if title %}
+      <title>Nathan et Loic | {{ title }}</title>
+    {% else %}
+      <title>Nathan et Loic</title>
+    {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127422662-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127422662-1');
+    </script>
+
+  </head>
+  <body>
+
+    {% block content %} {% endblock %}
+
+    <script src="{% static 'build/js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'build/js/notify.min.js' %}"></script>
+
+    {% if messages %}
+      {% for message in messages %}
+        <script>$.notify("{{message}}", "{{message.tags}}");</script>
+      {% endfor %}
+    {% endif %}
+
+    <script src="{% static 'build/js/popper.min.js' %}"></script>
+    <script src="{% static 'build/js/bootstrap.min.js' %}"></script>
+
+  </body>
+</html>

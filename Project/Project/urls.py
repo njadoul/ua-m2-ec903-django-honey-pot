@@ -19,10 +19,15 @@ from django.urls import path
 from HoneyPot import views
 from HoneyPot.views import contact, connex
 from django.urls import path, include
+from users import views as users_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('register/', users_views.register, name='register'),
+    path('',include('HoneyPot.urls'))
+
     path('contact/', views.contact, name='contact'),
     path('connex/', views.connex, name='connex'),
     
@@ -30,5 +35,4 @@ urlpatterns = [
     path('conditions/', views.conditions, name = 'conditions'),
     path('mentions/', views.mentions, name = 'mentions'),
     path('',include('HoneyPot.urls')),
-
 ]

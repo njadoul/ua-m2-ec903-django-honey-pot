@@ -2,8 +2,9 @@ from django.db import models
 from django.utils import timezone
 
 class Connex(models.Model):
-    login = models.TextField(max_length = 20, blank = True)
-    password = models.TextField(max_length = 20, blank = True)
+
+    login = models.CharField(max_length = 20, blank = True)
+    password = models.CharField(max_length = 20, blank = True)
     ip = models.GenericIPAddressField()
     user_agent = models.TextField(max_length = 50)
     date = models.DateTimeField(default=timezone.now)
@@ -15,8 +16,9 @@ class Connex(models.Model):
         return self.ip
 
 class Contact(models.Model):
-    nom = models.TextField(max_length = 20, blank = True)
-    prenom = models.TextField(max_length = 20, blank = True)
+
+    nom = models.CharField(max_length = 20, blank = True)
+    prenom = models.CharField(max_length = 20, blank = True)
     mail = models.EmailField(blank = True)
     message = models.TextField(max_length = 50, blank = True)
     ip = models.GenericIPAddressField()

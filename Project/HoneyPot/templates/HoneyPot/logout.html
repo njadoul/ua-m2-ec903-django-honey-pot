@@ -1,0 +1,46 @@
+{% extends "HoneyPot/base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="logo-container">
+    <img alt="" src="{% static 'build/img/miel.png' %}">
+  </div>
+      <a class="navbar-brand" href="{% url 'home' %}">NATHAN ET LOIC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'mentions' %}">MENTIONS LEGALES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'donnees' %}">DONNEES PERSONNELLES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'conditions' %}">CGU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">SE CONNECTER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">NOUS CONTACTER</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <h1>Vous avez été déconnecté !</h1>
+
+        <div class="border-top pt-3">
+          <a href="{% url 'home' %}" class="btn btn-primary btn-round btn-lg btn-block" type="submit">Se reconnecter</a>
+        </div>
+      </div>
+    </main>
+
+{% endblock %}

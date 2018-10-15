@@ -1,0 +1,2 @@
+web: gunicorn Project.wsgi --log-file -
+web2: node node_modules/gulp/bin/gulp build
