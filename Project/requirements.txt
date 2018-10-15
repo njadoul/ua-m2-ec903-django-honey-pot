@@ -3,8 +3,10 @@ decorator==4.0.11
 Django==2.1.1
 django-crispy-forms==1.7.2
 django-gulp==4.1.0
+dj-database-url==0.5.0
 env-tools==2.2.0
 gunicorn==19.9.0
+psycopg2==2.7.5
 pytz==2018.5
 pyxdg==0.25
 requests==2.12.4
