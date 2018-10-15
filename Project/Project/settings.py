@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0']
 
+GOOGLE_ANALYTICS_KEY = 'UA-127422662-1'
 
 # Application definition
 
