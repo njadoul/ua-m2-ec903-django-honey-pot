@@ -14,16 +14,18 @@
     {% else %}
       <title>Nathan et Loic</title>
     {% endif %}
+    
+    {% if settings.GOOGLE_ANALYTICS_KEY %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{settings.GOOGLE_ANALYTICS_KEY}}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127422662-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-127422662-1');
-    </script>
+        gtag('config', '{{settings.GOOGLE_ANALYTICS_KEY}}');
+      </script>
+    {% endif %}
 
   </head>
   <body>
