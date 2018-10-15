@@ -9,6 +9,18 @@ ALLOWED_HOSTS = ['nathanetloic.herokuapp.com']
 
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
 
+INSTALLED_APPS = [
+    'HoneyPot',
+    'users.apps.UsersConfig',
+    'crispy_forms',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DATABASES['default'] = dj_database_url.config()

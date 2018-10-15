@@ -14,6 +14,17 @@
     {% else %}
       <title>Nathan et Loic</title>
     {% endif %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127422662-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127422662-1');
+    </script>
+
   </head>
   <body>
 
@@ -27,7 +38,7 @@
         <script>$.notify("{{message}}", "{{message.tags}}");</script>
       {% endfor %}
     {% endif %}
-    
+
     <script src="{% static 'build/js/popper.min.js' %}"></script>
     <script src="{% static 'build/js/bootstrap.min.js' %}"></script>
 
