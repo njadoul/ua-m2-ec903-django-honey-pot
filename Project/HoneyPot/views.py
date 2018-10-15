@@ -65,13 +65,13 @@ def home(request):
             get_connex.date = datetime.datetime.today()
             get_connex.save()
 
-            user = authenticate(username=get_connex.login, password=get_connex.password)
+            # user = authenticate(username=get_connex.login, password=get_connex.password)
 
-            if user:
-                login(request, user)
-                messages.success(request, 'Connexion réussie')
-            else:
-                messages.error(request, 'La connexion a échouée')
+            # if user:
+                # login(request, user)
+                # messages.success(request, 'Connexion réussie')
+            # else:
+            messages.error(request, 'La connexion a échouée')
 
     return render(request, 'HoneyPot/login.html', locals())
 
