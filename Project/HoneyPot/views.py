@@ -1,9 +1,11 @@
+
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm, ConnexForm
 from .models import Contact, Connex
+
 import datetime
 
 
@@ -15,6 +17,7 @@ def contact(request):
         get_contact.prenom = form.cleaned_data['prenom']
         get_contact.mail = form.cleaned_data['mail']
         get_contact.message = form.cleaned_data['message']
+
 
         get_contact.user_agent = request.META['HTTP_USER_AGENT']
 
@@ -81,6 +84,7 @@ def conditions(request):
 
 def donnees(request):
     return render(request,'HoneyPot/donnees.html', { 'title' : 'Données personnelles'})
-
+  
 def mentions(request):
     return render(request,'HoneyPot/mentions.html', { 'title' : 'Mentions légales'})
+
