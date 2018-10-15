@@ -25,7 +25,7 @@ SECRET_KEY = 'nr^#32hxa8mn!cbikb94_t4b((_xj8&3=3qr0(xx0!ozbji+g2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django_gulp',
+    # 'django_gulp',
     'django.contrib.staticfiles',
 ]
 
