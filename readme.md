@@ -22,6 +22,5 @@ Ou alors utiliser tout simplement docker-compose
 1. a) installer docker-compose : https://docs.docker.com/compose/install/ 
 1. b) si ce n'est pas déjà fait Ajouter vous dans le group docker : sudo usermod -aG docker $USER
 2. se diriger vers le dossier project : cd Project
-3. Appliquer les migrations : python3 manage.py makemigrations et python3 manage.py migrate
-4. utiliser la commande docker-compose build pour construire l'Image avec le Dockerfile
-5. utiliser la commande docker-compose up pour lancer le service web et lancer le serveur à l'adresse http://0.0.0.0:8000/ dans votre navigateur
+3. utiliser la commande docker-compose build pour construire l'Image avec le Dockerfile
+4. utiliser la commande docker-compose up pour lancer le service web et lancer le serveur à l'adresse http://0.0.0.0:8000/ dans votre navigateur
