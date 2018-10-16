@@ -19,7 +19,7 @@ Pour installer tous les fichiers du fichier requirements.txt dans votre virtuale
 Ou alors utiliser tout simplement docker-compose
 
 1. a) installer docker-compose : https://docs.docker.com/compose/install/ 
-1. b) si ce n'est pas déjà fait Ajouter vous dans le groupe docker : ```sudo usermod -aG docker $USER```
+   b) si ce n'est pas déjà fait Ajouter vous dans le groupe docker : ```sudo usermod -aG docker $USER```
 2. se diriger vers le dossier project : ```cd Project```
 3. Appliquer les migrations : ```python3 manage.py makemigrations``` et ```python3 manage.py migrate```
 4. Créer un superutilisateur pour accéder à l'administration : 
