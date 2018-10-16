@@ -10,7 +10,7 @@ Pour installer tous les fichiers du fichier requirements.txt dans votre virtuale
 2. activer votre virtualenv avec la commande suivante : ```source bin/activate```
 3. diriger vers le dossier qui contient requirements.txt : ```cd Project```
 4. lancer la commande suivante: ```pip install -r requirements.txt```
-5. Il faut ensuite se rendre dans le dossier Projet à la racine puis lancer cette commande pour installer tout les modules nodes nécessaire: ```npm install```
+5. lancer cette commande pour installer tout les modules nodes nécessaire: ```npm install```
 6. Rendre le script pour lancer les migrations et créer un superutilisateur exécutable : ```chmod u+x setupTODO.sh```
 7. Lancer le script : ```./setupTODO.sh```
 8. lancer le serveur avec la commande ```python3 manager.py runserver```
