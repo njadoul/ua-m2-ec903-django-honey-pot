@@ -20,7 +20,7 @@ Pour installer tous les fichiers du fichier requirements.txt dans votre virtuale
 
 1. Ou alors utiliser tout simplement docker-compose
    - a) installer docker-compose : https://docs.docker.com/compose/install/ 
-   - b) si ce n'est pas déjà fait Ajouter vous dans le groupe docker : ```sudo usermod -aG docker $USER```
+   - b) si ce n'est pas déjà fait s'ajouter dans le groupe docker : ```sudo usermod -aG docker $USER```
 2. Rendre le script pour lancer les migrations et créer un superutilisateur exécutable : ```chmod u+x setupTODO.sh```
 3. Lancer le script : ```./setupTODO.sh```
 4. utiliser la commande ```docker-compose build``` pour construire l'Image avec le Dockerfile
