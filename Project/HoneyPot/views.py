@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm, ConnexForm
 from .models import Contact, Connex
-#from django.http import HttpReponseRedirect
+from django.http import HttpReponseRedirect
 
 import datetime
 
