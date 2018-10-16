@@ -23,6 +23,6 @@ Ou alors utiliser tout simplement docker-compose
 2. se diriger vers le dossier project : ```cd Project```
 3. Appliquer les migrations : ```python3 manage.py makemigrations``` et ```python3 manage.py migrate```
 4. Créer un superutilisateur pour accéder à l'administration : 
-    ```echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'pass')" | ./manage.py shell```
+    ```echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'pass')" | python3 manage.py shell```
 5. utiliser la commande ```docker-compose build``` pour construire l'Image avec le Dockerfile
 6. utiliser la commande ```docker-compose up``` pour lancer le service web et lancer le serveur à l'adresse http://0.0.0.0:8000/ dans votre navigateur
