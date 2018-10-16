@@ -13,11 +13,11 @@ RUN pip install -r /code/requirements.txt
 
 ADD . /code/
 
+CMD python manager.py makemigrations
+CMD python manager.py migrate
+
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
 RUN apt-get install --yes nodejs
 
 RUN npm install gulp
 RUN npm install
-
-RUN python3 /code/manager.py makemigrations
-RUN python3 /code/manager.py migrate
