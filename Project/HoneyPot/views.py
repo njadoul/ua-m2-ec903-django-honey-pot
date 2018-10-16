@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm, ConnexForm
 from .models import Contact, Connex
-from django.http import HttpReponseRedirect
+#from django.http import HttpReponseRedirect
 
 import datetime
 
@@ -39,7 +39,7 @@ def contact(request):
                 messages.success(request, 'Message envoyé')
             else:
                 messages.error(request, 'Message non envoyé')
-            
+
             return http.HttpReponseRedirect('')
 
     return render(request, 'HoneyPot/contact.html', locals())
@@ -87,7 +87,6 @@ def conditions(request):
 
 def donnees(request):
     return render(request,'HoneyPot/donnees.html', { 'title' : 'Données personnelles'})
-  
+
 def mentions(request):
     return render(request,'HoneyPot/mentions.html', { 'title' : 'Mentions légales'})
-

@@ -17,7 +17,7 @@ from django.contrib import admin
 
 from django.urls import path
 from HoneyPot import views
-from HoneyPot.views import contact, connex
+from HoneyPot.views import contact,home
 from django.urls import path, include
 from users import views as users_views
 
@@ -26,11 +26,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('register/', users_views.register, name='register'),
-    path('',include('HoneyPot.urls'))
+    path('',include('HoneyPot.urls')),
 
     path('contact/', views.contact, name='contact'),
-    path('connex/', views.connex, name='connex'),
-    
+
+
     path('', views.home, name = 'home'),
     path('conditions/', views.conditions, name = 'conditions'),
     path('mentions/', views.mentions, name = 'mentions'),

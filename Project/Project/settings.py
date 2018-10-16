@@ -25,7 +25,8 @@ SECRET_KEY = 'nr^#32hxa8mn!cbikb94_t4b((_xj8&3=3qr0(xx0!ozbji+g2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0',
+                '127.0.0.1']
 
 GOOGLE_ANALYTICS_KEY = 'UA-127422662-1'
 
@@ -112,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fr'
 
-TIME_ZONE = 'UTC+4'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
