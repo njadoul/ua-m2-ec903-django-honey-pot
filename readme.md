@@ -1,5 +1,7 @@
 Site disponible à l'adresse suivante : https://nathanetloic.herokuapp.com/
 
+## Sans docker compose
+
 1. Il vous faudra télécharger nodejs pour avoir npm : 
 https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
@@ -14,6 +16,7 @@ Pour installer tous les fichiers du fichier requirements.txt dans votre virtuale
 8. Lancer le script : ```./setupTODO.sh```
 9. lancer le serveur avec la commande ```python3 manager.py runserver```
 
+## Avec docker compose
 
 1. Ou alors utiliser tout simplement docker-compose
    - a) installer docker-compose : https://docs.docker.com/compose/install/ 
