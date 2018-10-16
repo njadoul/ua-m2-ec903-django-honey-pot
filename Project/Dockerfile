@@ -19,5 +19,5 @@ RUN apt-get install --yes nodejs
 RUN npm install gulp
 RUN npm install
 
-RUN python3 manager.py makemigrations
-RUN python3 manager.py migrate
+RUN python3 /code/manager.py makemigrations
+RUN python3 /code/manager.py migrate
