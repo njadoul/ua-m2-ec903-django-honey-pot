@@ -27,6 +27,6 @@ Pour installer tous les fichiers du fichier requirements.txt dans votre virtuale
 6. utiliser la commande ```docker-compose up``` pour lancer le service web et lancer le serveur à l'adresse http://0.0.0.0:8000/ dans votre navigateur
 
 
-## Envoi d'email
+## Envoi d'email ( en production )
 
-Pour faire fonctionner l'envoi d'email via le formulaire de contact il vous faudra créer un compte Sendgrid  https://sendgrid.com et ajouter votre API KEY dans le fichier settings.py pour la variable EMAIL_HOST_PASSWORD 
+Pour faire fonctionner l'envoi d'email via le formulaire de contact il vous faudra créer un compte Sendgrid  https://sendgrid.com et ajouter votre API KEY dans le fichier prod_settings.py pour la variable EMAIL_HOST_PASSWORD 
