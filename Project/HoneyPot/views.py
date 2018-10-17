@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.core.mail import send_mail
@@ -32,8 +31,10 @@ def contact(request):
             get_contact.ip = ipaddress
             get_contact.date = datetime.datetime.today()
             get_contact.save()
+            
+            info = get_contact.nom + " " + get_contact.prenom + " " + get_contact.mail + " " + get_contact.message
 
-            res = send_mail(get_contact.nom, get_contact.message, get_contact.mail, ['loicjeancharles@gmail.com','nathanjadoul@live.fr'], fail_silently=False)
+            res = send_mail(get_contact.nom, info, info, ['loicjeancharles@gmail.com','nathanjadoul@live.fr'], fail_silently=False)
 
             if res:
                 messages.success(request, 'Message envoyé')
