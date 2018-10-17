@@ -4,6 +4,7 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm, ConnexForm
 from .models import Contact, Connex
+from django.conf import settings
 # from django.http import HttpReponseRedirect
 
 import datetime
@@ -32,15 +33,16 @@ def contact(request):
             get_contact.date = datetime.datetime.today()
             get_contact.save()
             
-            info = get_contact.nom + " " + get_contact.prenom + " " + get_contact.mail + " " + get_contact.message
-
-            res = send_mail(get_contact.nom, info, info, ['loicjeancharles@gmail.com','nathanjadoul@live.fr'], fail_silently=False)
-
-            if res:
-                messages.success(request, 'Message envoyé')
+            if settings.PROD == 1:
+                info = get_contact.nom + " " + get_contact.prenom + " " + get_contact.mail + " " + get_contact.message
+                res = send_mail(get_contact.nom, info, info, ['loicjeancharles@gmail.com','nathanjadoul@live.fr'], fail_silently=False)
+                
+                if res:
+                    messages.success(request, 'Message envoyé')
+                else:
+                    messages.error(request, 'Message non envoyé')
             else:
                 messages.error(request, 'Message non envoyé')
-
             # return http.HttpReponseRedirect('')
 
     return render(request, 'HoneyPot/contact.html', locals())
