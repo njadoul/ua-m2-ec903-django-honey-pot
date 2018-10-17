@@ -25,3 +25,8 @@ Pour installer tous les fichiers du fichier requirements.txt dans votre virtuale
 4. Lancer le script : ```./setupTODO.sh```
 5. utiliser la commande ```docker-compose build``` pour construire l'Image avec le Dockerfile
 6. utiliser la commande ```docker-compose up``` pour lancer le service web et lancer le serveur à l'adresse http://0.0.0.0:8000/ dans votre navigateur
+
+
+## Envoi d'email
+
+Pour faire fonctionner l'envoi d'email via le formulaire de contact il vous faudra créer un compte Sendgrid  https://sendgrid.com et ajouter votre API KEY dans le fichier settings.py pour la variable EMAIL_HOST_PASSWORD 
