@@ -137,6 +137,8 @@ CRISPY_TEMPLATE_PACK ='bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home'
 
+PROD = 0
+
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
