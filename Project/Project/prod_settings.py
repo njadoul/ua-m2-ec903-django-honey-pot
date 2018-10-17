@@ -5,6 +5,8 @@ DEBUG = False
 
 SECRET_KEY = '4(3aipi5unhc53c53si#_d8@*!f%gsr0l6ri6$+=xi@a=+5@b='
 
+PROD = 1
+
 ALLOWED_HOSTS = ['nathanetloic.herokuapp.com']
 
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
