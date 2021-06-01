@@ -10,7 +10,7 @@ psycopg2==2.7.5
 pytz==2018.5
 pyxdg==0.25
 requests==2.12.4
-urllib3==1.19.1
+urllib3==1.26.5
 virtualenv==15.1.0
 webencodings==0.5
 whitenoise==4.1
